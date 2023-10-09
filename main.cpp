@@ -24,5 +24,10 @@ int main() {
         player.heal();
         std::cout << "Player stats after hill: " << player << std::endl;
     }
+    try {
+        Player player1(120, 120, 0, 0, 0);
+    } catch (std::invalid_argument e) {
+        std::cout << "caught exception as expected: " << e.what() << std::endl;
+    }
     return 0;
 }
