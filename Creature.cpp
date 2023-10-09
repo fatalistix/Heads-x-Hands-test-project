@@ -56,10 +56,10 @@ void Creature::attack(Creature & another) const {
             uint32_t damage = randomInRange(damageLowBound, damageHighBound);
             if (damage > another.health) {
                 another.health = 0;
-                break;
             } else {
                 another.health -= damage;
             }
+            break;
         }
     }
 }
