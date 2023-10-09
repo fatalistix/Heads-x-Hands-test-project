@@ -4,13 +4,13 @@
 
 Creature::Creature(uint8_t attackValue, uint8_t defenceValue, uint32_t health, uint32_t damageLowBound, uint32_t damageHighBound) {
     if (attackValue <= 0 || 30 < attackValue) {
-        throw std::invalid_argument("attackValue cannot be less then one or greater then 30");
+        throw std::invalid_argument("attackValue cannot be less then 1 or greater then 30");
     }
     if (defenceValue <= 0 || 30 < defenceValue) {
-        throw std::invalid_argument("defenceValue cannot be less then one or greater then 30");
+        throw std::invalid_argument("defenceValue cannot be less then 1 or greater then 30");
     }
     if (health <= 0) {
-        throw std::invalid_argument("health cannot be less then one");
+        throw std::invalid_argument("health cannot be less then 1");
     }
     if (damageHighBound < damageLowBound) {
         throw std::invalid_argument("damageHighBound cannot be less then damageLowBound");
