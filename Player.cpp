@@ -17,6 +17,7 @@ void Player::heal() {
             health += uint32_t(maxHealth * 0.3);
         }
         ++numOfHeals;
+        return;
     }
     throw std::invalid_argument("no heal available");
 }
