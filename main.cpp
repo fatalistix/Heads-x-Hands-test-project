@@ -9,7 +9,7 @@ int main() {
     std::cout << monster << std::endl;
     player.attack(monster);
     std::cout << "Monster dead = " << monster.isDead() << std::endl;
-    Monster anotherMonster(20, 10, 30, 5, 8);
+    Monster anotherMonster(30, 10, 30, 5, 8);
     std::cout << "NEW MONSTER: " << anotherMonster << std::endl;
     anotherMonster.attack(player);
     std::cout << "Player dead = " << player.isDead() << std::endl;
@@ -20,6 +20,9 @@ int main() {
         std::cout << "Survived" << std::endl;
         player.attack(anotherMonster);
         std::cout << "Another monster is dead = " << anotherMonster.isDead() << std::endl;
+        std::cout << "Player stats: " << player << std::endl;
+        player.heal();
+        std::cout << "Player stats after hill: " << player << std::endl;
     }
     return 0;
 }
